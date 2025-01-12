@@ -1,0 +1,269 @@
+/* File: styles/globals.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base styles */
+@layer base {
+  body {
+    @apply font-sans text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .container-padding {
+    @apply px-4 py-16;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+/* File: styles/components.css */
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply font-bold py-2 px-4 rounded transition duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-red-600 text-white hover:bg-red-700 rounded-full;
+  }
+
+  /* Section styles */
+  .section-title {
+    @apply text-3xl font-bold mb-8;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .card-body {
+    @apply p-4;
+  }
+
+  /* Grid styles */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+}
+
+/* File: styles/header.css */
+
+.header {
+  @apply bg-white shadow-md;
+}
+
+.header-nav {
+  @apply container mx-auto px-4 py-4 flex justify-between items-center;
+}
+
+.nav-links {
+  @apply hidden md:flex space-x-4;
+}
+
+.nav-link {
+  @apply hover:text-gray-600;
+}
+
+/* File: styles/hero.css */
+
+.hero-section {
+  @apply relative h-[600px];
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-black opacity-50;
+}
+
+.hero-content {
+  @apply absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4;
+}
+
+.hero-title {
+  @apply text-4xl md:text-5xl mb-4 text-shadow;
+}
+
+.hero-subtitle {
+  @apply text-xl mb-8;
+}
+
+/* File: styles/properties.css */
+
+.property-card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.property-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+.property-description {
+  @apply text-gray-600 mb-4;
+}
+
+.property-price {
+  @apply text-lg font-bold;
+}
+
+/* File: styles/services.css */
+
+.services-section {
+  @apply bg-gray-100;
+}
+
+.service-icon {
+  @apply w-16 h-16 mb-4 rounded-md;
+}
+
+/* File: styles/testimonials.css */
+
+.testimonial-avatar {
+  @apply w-16 h-16 rounded-full mx-auto mb-4;
+}
+
+.testimonial-quote {
+  @apply italic mb-4;
+}
+
+.testimonial-author {
+  @apply font-semibold;
+}
+
+/* File: styles/footer.css */
+
+.footer {
+  @apply bg-[#f8f8f8] py-8;
+}
+
+.footer-grid {
+  @apply container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.footer-title {
+  @apply text-xl font-bold mb-4;
+}
+
+.footer-link {
+  @apply hover:text-gray-600;
+}
+
+
+/* 
+blog page  */
+
+
+
+
+
+@layer components {
+  .container-wrapper {
+    @apply container mx-auto px-4 py-8;
+  }
+  
+  .header {
+    @apply flex justify-between items-center mb-6;
+  }
+  
+  .header-title {
+    @apply text-xl font-bold;
+  }
+  
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900;
+  }
+  
+  .category-filter {
+    @apply flex flex-wrap items-center gap-4 mb-6 text-sm;
+  }
+  
+  .category-link {
+    @apply text-gray-600 hover:text-gray-900;
+  }
+  
+  .category-popular {
+    @apply bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600;
+  }
+  
+  .featured-article {
+    @apply bg-white rounded-xl overflow-hidden shadow-sm mb-6;
+  }
+  
+  .featured-image {
+    @apply h-48 w-full object-cover md:h-full md:w-48;
+  }
+  
+  .featured-content {
+    @apply p-8;
+  }
+  
+  .featured-title {
+    @apply block mt-1 text-lg leading-tight font-medium text-black hover:underline;
+  }
+  
+  .featured-description {
+    @apply mt-2 text-gray-500;
+  }
+  
+  .author-info {
+    @apply mt-4 flex items-center;
+  }
+  
+  .author-avatar {
+    @apply rounded-full mr-2  aspect-square  object-cover;
+  }
+  
+  .author-name {
+    @apply text-sm text-gray-500;
+  }
+  
+  .article-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .article-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-sm;
+  }
+  
+  .article-image {
+    @apply w-full h-48 object-cover;
+  }
+  
+  .article-content {
+    @apply p-4;
+  }
+  
+  .article-title {
+    @apply text-lg font-semibold mb-2 hover:underline;
+  }
+  
+  .article-description {
+    @apply text-gray-600 text-sm mb-4;
+  }
+  
+  .footer {
+    @apply mt-12 text-center;
+  }
+  
+  .footer-text {
+    @apply text-sm text-gray-600 mb-4;
+  }
+  
+  .social-links {
+    @apply flex justify-center space-x-6;
+  }
+  
+  .social-link {
+    @apply text-gray-400 hover:text-gray-600;
+  }
+}
